@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayMusic</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(background.jpg);
+            width: 100vw;
+            height: 100vh;
+            /* z-index: 0; */
+            position: relative;
+        }
+        img{
+            height: 200px;
+            width: 170px;
+            padding: 10px;
+        }
+        #starter{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position:absolute;
+            background-color: #71ff7c;
+            height: 200px;
+            width: 500px;
+            border-radius: 20px;
+            border: double red 6px;
+            /* outline: double; */
+            /* z-index: 1; */
+        }
+        span{
+            color:#581993;
+            font-size: x-large;
+            padding-bottom: 10px;
+        }
+        p{
+            color:darkred;
+        }button{
+            width: 60px;
+            height: 25px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        #error{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position:absolute;
+            background-color: #eef9ef;
+            height: 200px;
+            width: 500px;
+            border-radius: 20px;
+            border: double 6px;
+
+        }
+        #error strong{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="starter">
+            <span><strong>Welcome to MusicPlay</strong></span>
+            <p>Press displayed keys to play Music</p>
+            <button onclick="start()">Ok</button>
+        </div>
+        <div id="error" style="display:none">
+            <strong>Wrong key entered !!</strong>
+            <button onclick="RemoveError()">Ok</button>
+            <p>Press enter to continue</p>
+        </div>
+        <img src="W.png" alt="img" onclick="crashCymbal()">
+        <!-- <audio autoplay src="floor_sound.mp3" ></audio> -->
+        <img src="A.png" alt="img" onclick="hiHat()">
+        <img src="S.png" alt="img" onclick="snareDrum()">
+        <img src="D.png" alt="img" onclick="bassDrum()">
+        <img src="I.png" alt="img" onclick="floorDrum()">
+        <img src="J.png" alt="img" onclick="rideCrymbal()">
+        <img src="K.png" alt="img" onclick="rideCrymbal()">
+        <img src="L.png" alt="img" onclick="rideCrymbal()">
+        
+    </div>
+<script src="Music.js"></script>
+</body>
+
+</html>
